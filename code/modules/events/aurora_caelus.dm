@@ -32,7 +32,7 @@
 	fade_kitchen(fade_in = TRUE)
 
 /datum/round_event/aurora_caelus/start()
-	if(!prob(1) && !check_holidays(APRIL_FOOLS))
+	if(prob(1) && !check_holidays(APRIL_FOOLS))
 		return
 
 	var/list/human_blacklist = list()
