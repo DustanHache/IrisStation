@@ -22,7 +22,15 @@
 		stowaway.forceMove(selected_closet) //Move in
 		stowaway.Sleeping(5 SECONDS)
 
-	give_item_to_holder(/obj/item/storage/toolbox/mechanical, list(LOCATION_HANDS = ITEM_SLOT_HANDS)) // gives them tools to break free if need be
+	give_item_to_holder(/obj/item/storage/toolbox/mechanical, list(LOCATION_HANDS = ITEM_SLOT_HANDS))
+	give_item_to_holder(
+		/obj/item/multitool
+		list(
+			LOCATION_LPOCKET,
+			LOCATION_RPOCKET,
+			LOCATION_BACKPACK,
+			LOCATION_HANDS,
+		)) // gives them tools to break free if need be
 
 
 /datum/quirk/item_quirk/stowaway/post_add()
